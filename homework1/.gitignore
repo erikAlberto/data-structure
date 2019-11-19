@@ -50,9 +50,7 @@ hs_err_pid*
 **/*.iml
 **/*.idea
 
-
-/.gradle/
-/.idea/
-/build/
-/out/
-*.iml
+*.gradle
+*.idea
+*./build
+*./out
