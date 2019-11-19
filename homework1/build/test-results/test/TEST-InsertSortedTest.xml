@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="InsertSortedTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-11-18T23:59:39" hostname="AVARGASE-DH01" time="0.002">
+<testsuite name="InsertSortedTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-11-19T12:48:21" hostname="AVARGASE-DH01" time="0.002">
   <properties/>
   <testcase name="testNull" classname="InsertSortedTest" time="0.001"/>
   <testcase name="testInsertEmpty" classname="InsertSortedTest" time="0.0"/>
