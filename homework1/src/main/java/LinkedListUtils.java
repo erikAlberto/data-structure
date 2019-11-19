@@ -1,5 +1,3 @@
-package com.company;
-
 import java.util.LinkedList;
 
 /*
@@ -13,22 +11,23 @@ public class LinkedListUtils {
 	public static void insertSorted(LinkedList<Integer> list, int value) {
 		/* IMPLEMENT THIS METHOD! */
 		int i =0;
-		while (list.get(i) != null){
-			//System.out.println(list.listIterator(i));
-			//System.out.println(list.listIterator(i).next());
+		while (list != null) {
+			if (list.isEmpty()){
+				list.add(value);
+				break;
+			}
 			if (value <= list.get(i)){
 				list.add(i, value);
 				break;
 			}
-			if (value > list.getLast()){
+			else if (value > list.getLast()){
 				list.addLast(value);
 				break;
 			}
 			i++;
 		}
-		//System.out.println(list);
 	}
-
+	//if (value != 0 && list.size() != 0)
 	public static void removeMaximumValues(LinkedList<String> list, int N) {
 
 		/* IMPLEMENT THIS METHOD! */
