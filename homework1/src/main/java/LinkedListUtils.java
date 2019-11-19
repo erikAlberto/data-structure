@@ -10,21 +10,21 @@ public class LinkedListUtils {
 	
 	public static void insertSorted(LinkedList<Integer> list, int value) {
 		/* IMPLEMENT THIS METHOD! */
-		int i =0;
-		while (list != null) {
-			if (list.isEmpty()){
-				list.add(value);
-				break;
+		if (list != null){
+			for (int i = 0; i <=list.size(); i++){
+				if (list.isEmpty()){
+					list.add(value);
+					break;
+				}
+				if (value <= list.get(i)){
+					list.add(i, value);
+					break;
+				}
+				else if (value > list.getLast()){
+					list.addLast(value);
+					break;
+				}
 			}
-			if (value <= list.get(i)){
-				list.add(i, value);
-				break;
-			}
-			else if (value > list.getLast()){
-				list.addLast(value);
-				break;
-			}
-			i++;
 		}
 	}
 	//if (value != 0 && list.size() != 0)
