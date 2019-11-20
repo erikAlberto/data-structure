@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 
 /*
@@ -9,6 +11,7 @@ import java.util.LinkedList;
 public class LinkedListUtils {
 	
 	public static void insertSorted(LinkedList<Integer> list, int value) {
+
 		/* IMPLEMENT THIS METHOD! */
 		if (list != null){
 			for (int i = 0; i <=list.size(); i++){
@@ -21,17 +24,27 @@ public class LinkedListUtils {
 					break;
 				}
 				else if (value > list.getLast()){
-					list.addLast(value);
+					list.add(value);
 					break;
 				}
 			}
 		}
 	}
-	//if (value != 0 && list.size() != 0)
 	public static void removeMaximumValues(LinkedList<String> list, int N) {
 
 		/* IMPLEMENT THIS METHOD! */
-
+        if (list != null && N >=0 ){
+			if (list.size() == 1){
+				list.remove();
+			}
+			for (int i = 0; i <= list.size()-1; i++){
+				if (list.get(i).compareTo(list.get(i+1)) < 0 || list.get(i+1).compareTo(list.get(i)) < 0) {
+					if (list.get(i).compareTo(list.get(i+1)) >= N || list.get(i+1).compareTo(list.get(i)) > N) {
+						list.remove();
+					}
+				}
+			}
+		}
 	}
 	
 	public static boolean containsSubsequence(LinkedList<Integer> one, LinkedList<Integer> two) {
